@@ -37,6 +37,45 @@ pdf_options:
 
 🔍💨✨
 
+## Installation
+
+### Automated Installation (Recommended)
+
+Run the installation script to build the tool and add it to your PATH automatically:
+
+```sh
+$> ./install.sh
+```
+
+Restart your terminal or source your shell configuration file as instructed by the script.
+
+### Manual Installation
+
+If you prefer to install manually:
+
+1. **Build the Tool**
+   ```sh
+   $> ./build.sh
+   ```
+
+2. **Add to PATH**
+   To run `gg` from any directory, you need to add it to your system's PATH.
+
+   **Option A: Move to a global bin directory**
+   ```sh
+   $> sudo mv gg /usr/local/bin/
+   ```
+
+   **Option B: Add the installation directory to your PATH**
+   
+   *For Zsh Users (Default on macOS):*
+   1. Open `~/.zshrc`.
+   2. Add `export PATH=$PATH:/path/to/QuickGrep` (replace with actual path).
+   3. Run `source ~/.zshrc`.
+
+   *For Bash Users:*
+   Follow the same steps but for `~/.bashrc` or `~/.bash_profile`.
+
 ## Usage
 
 Compile the C file, name the output `gg` (for quick typing) and put it somewhere in your path. It will do a recursive, case insensitive search by default and put in line numbers so the output plays well with many editors like [vim](https://vimhelp.org/quickfix.txt.html).
